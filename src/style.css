@@ -1,0 +1,273 @@
+ * {
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: Inter, Sans-Serif;
+     display: block;
+     max-width: 420px;
+     margin: auto;
+     
+ }
+ 
+ .info {
+   display: inline-block;
+   max-width: 420px;
+   margin: 0;
+   text-align: center;
+ }
+ 
+ 
+ .profilepic {
+   margin: 0;
+   width: 420px;
+   border-radius: 10px;
+ }
+ 
+ .myname {
+   font-weight: 900;
+   letter-spacing: -0.05em;
+   font-size: 39px;
+   margin: 0;
+   padding-block: 15px;
+   
+ }
+ 
+ .myjob {
+   font-weight: 400;
+   letter-spacing: 0.01em;
+   margin: 0;
+ }
+
+ .mylink {
+   margin: 0;
+   padding-block: 20px;
+ }
+
+ .buttoncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+button {
+    background-color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+    border: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+ .emailicon {
+  width: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button > span {
+  text-align: center;
+  margin-right: auto;
+  letter-spacing: 0.1em;
+  font-weight: 650;
+}
+
+a {
+  text-decoration: none;
+}
+
+.about, .interests {
+  display: block;
+  max-width: 370px;
+  margin: auto;
+}
+
+.footer {
+  text-align: center;
+}
+
+:root {
+    --facebook: black;
+    --x: black;
+    --whatsapp: black;
+    --instagram: black;
+    --github: black;
+}
+
+.xicon,
+.whatsappicon,
+.instagramicon,
+.githubicon,
+.facebookicon {
+  width: 40px;
+}
+
+.footericons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding-top: 30px;
+  margin-bottom: 15px;
+}
+
+
+.footericons > a {
+
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.6s all ease-in-out;
+}
+
+.footericons > a img path,
+.footericons > a img circle {
+    transition: 0.3s all ease-in-out;
+}
+
+.footericons a span {
+
+    position: absolute;
+
+    color: #fff;
+    transform: translateY(0px);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0s;
+}
+
+.footericons > a span::before {
+    position: absolute;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footericons > a.active span,
+
+.footericons > a:hover span {
+
+    transform: translateY(-80px);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.footericons > a.active svg path,
+.footericons > a.active svg circle,
+.footericons > a:hover svg path,
+.footericons > a:hover svg circle {
+    fill: #fff;
+}
+
+.footericons > a.facebook span {
+
+    background-color: var(--facebook);
+
+}
+
+.footericons > a.facebook span::before {
+    border-top-color: var(--facebook);
+}
+
+.footericons > a.whatsapp span {
+
+    background-color: var(--whatsapp);
+
+}
+
+.footericons > a.whatsapp span::before {
+    border-top-color: var(--whatsapp);
+}
+
+.footericons > a.x span {
+    background-color: var(--x);
+}
+
+.footericons > a.x span::before {
+    border-top-color: var(--x);
+}
+
+.footericons > a.github span {
+    background-color: var(--github);
+}
+
+.footericons > a.github span::before {
+    border-top-color: var(--github);
+}
+
+.footericons > a.instagram span {
+    background-color: var(--instagram);
+}
+
+.footericons > a.instagram span::before {
+    border-top-color: var(--instagram);
+}
+
+.footericons > a.active,
+.footericons > a:hover {
+    box-shadow: -20px 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.footericons > a.facebook:hover {
+    background-color: var(--facebook);
+}
+
+.footericons > a.whatsapp:hover {
+    background-color: var(--whatsapp);
+}
+
+.footericons > a.x:hover {
+    background-color: var(--x);
+}
+
+.footericons > a.github:hover {
+    background-color: var(--github);
+}
+
+.footericons > a.instagram.active,
+.footericons > a.instagram:hover {
+    background-color: var(--instagram);
+}
+
+.signature {
+  letter-spacing: 0.1em;
+  font-style: italic;
+  font-family: "Playfair Display", "Didot", "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  button {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  button {
+   box-shadow: -5px 5px 10px rgba(255,255,255,0.898);
+  }
+}
